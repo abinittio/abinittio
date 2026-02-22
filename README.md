@@ -2,9 +2,9 @@
 
 # Nabil Yasini-Ardekani
 
-**Computational Chemist** · BSc Chemistry · MSc Artificial Intelligence
+BSc Chemistry · MSc Artificial Intelligence · MSc Molecular Modelling (next)
 
-Building physics-informed machine learning for drug discovery and molecular simulation.
+Aspiring computational chemist — currently building ML tools for drug discovery while working toward a deeper foundation in quantum mechanics, DFT, and molecular simulation.
 
 </div>
 
