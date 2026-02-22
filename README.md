@@ -6,8 +6,6 @@
 
 Building physics-informed machine learning for drug discovery and molecular simulation.
 
-[![Website](https://img.shields.io/badge/nabil.engineer-000?style=for-the-badge&logo=safari&logoColor=white)](https://nabil.engineer)
-
 </div>
 
 ---
