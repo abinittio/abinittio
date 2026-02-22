@@ -22,46 +22,100 @@ I develop graph neural networks and numerical simulation tools that encode real 
 
 <br/>
 
-## Featured projects
+## Drug discovery & ADMET
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### <a href="https://github.com/abinittio/Insilico-Drug-Discovery-Toolkit"><img src="https://img.shields.io/badge/Insilico_Drug_Discovery_Toolkit-5eead4?style=flat-square&logoColor=0d1b2a" height="25"/></a>
+### <a href="https://github.com/abinittio/Insilico-Drug-Discovery-Toolkit"><img src="https://img.shields.io/badge/Insilico_Drug_Discovery_Toolkit-5eead4?style=flat-square" height="25"/></a>
 
-Comprehensive ADMET prediction platform with monoamine transporter classification, abuse liability scoring, hERG cardiotoxicity, and CYP450 metabolism.
+Full ADMET prediction platform — monoamine transporter substrate vs blocker classification with stereochemistry-aware GNN.
 
-`0.974 AUC` · Stereochemistry-aware GNN (GAT + GIN) · HuggingFace Spaces
+`0.974 AUC` · GAT + GIN · Deployed on HuggingFace Spaces
 
 </td>
 <td width="50%" valign="top">
 
-### <a href="https://github.com/abinittio/BBB-Quantum-ADMET"><img src="https://img.shields.io/badge/BBB--Quantum--ADMET-5eead4?style=flat-square&logoColor=0d1b2a" height="25"/></a>
+### <a href="https://github.com/abinittio/Abuse-Liability-Predictor"><img src="https://img.shields.io/badge/Abuse_Liability_Predictor-5eead4?style=flat-square" height="25"/></a>
 
-Quantum-enhanced GNN for multi-task ADMET prediction using 34-dimensional features from 3D conformers.
+Drug abuse risk classification combining MAT activity with SMARTS-based structural pattern recognition and SAR pharmacology rules.
 
-HOMO/LUMO · Fukui indices · GATv2 + TransformerConv · Pretrained on `320k` ZINC molecules
+Validated on `80` DEA-scheduled compounds · HIGH/MODERATE/LOW risk tiers
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### <a href="https://github.com/abinittio/StereoAwareGNN"><img src="https://img.shields.io/badge/StereoAwareGNN-5eead4?style=flat-square&logoColor=0d1b2a" height="25"/></a>
+### <a href="https://github.com/abinittio/hERG-Cardiotoxicity-GNN"><img src="https://img.shields.io/badge/hERG_Cardiotoxicity_GNN-5eead4?style=flat-square" height="25"/></a>
 
-Blood-Brain Barrier permeability predictor — hybrid GAT → GCN → GraphSAGE with focal loss and stereo-aware encoding.
+Cardiac safety prediction via hERG channel inhibition modelling. Focal loss for class imbalance, K-fold ensembling with test-time augmentation.
 
-`0.9612 AUC` on 7,807-compound external validation · Outperforms ADMETlab 2.0, AttentiveFP, pkCSM
+Trained on `7,000+` ChEMBL compounds
 
 </td>
 <td width="50%" valign="top">
 
-### <a href="https://github.com/abinittio/DoseTrack"><img src="https://img.shields.io/badge/DoseTrack-5eead4?style=flat-square&logoColor=0d1b2a" height="25"/></a>
+### <a href="https://github.com/abinittio/CYP450-Metabolism-Predictor"><img src="https://img.shields.io/badge/CYP450_Metabolism_Predictor-5eead4?style=flat-square" height="25"/></a>
+
+Multi-task GNN for drug-drug interaction screening across 5 cytochrome P450 enzymes (1A2, 2C9, 2C19, 2D6, 3A4).
+
+Shared representation · Task-specific heads
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+## BBB permeability & quantum descriptors
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/StereoAwareGNN"><img src="https://img.shields.io/badge/StereoAwareGNN-5eead4?style=flat-square" height="25"/></a>
+
+Blood-Brain Barrier permeability predictor — hybrid GAT → GCN → GraphSAGE with focal loss and stereo-aware encoding.
+
+`0.9612 AUC` on 7,807-compound external validation · Outperforms ADMETlab 2.0
+
+</td>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/BBB-Quantum-ADMET"><img src="https://img.shields.io/badge/BBB--Quantum--ADMET-5eead4?style=flat-square" height="25"/></a>
+
+Quantum-enhanced GNN with 34-dimensional features from 3D conformers — HOMO/LUMO, Fukui indices, chemical hardness.
+
+GATv2 + TransformerConv · Pretrained on `320k` ZINC molecules
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+## Simulation & other
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/DoseTrack"><img src="https://img.shields.io/badge/DoseTrack-5eead4?style=flat-square" height="25"/></a>
 
 PK/PD simulation engine solving coupled ODEs for prodrug systems with saturable enzymatic conversion.
 
-RK4 · Michaelis-Menten · Sigmoid Emax · Bayesian personalisation with IQR outlier rejection
+RK4 · Michaelis-Menten · Sigmoid Emax · Bayesian personalisation
+
+</td>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/SoilIntelligence"><img src="https://img.shields.io/badge/SoilIntelligence-5eead4?style=flat-square" height="25"/></a>
+
+Precision agriculture system — soil analysis, Monte Carlo yield prediction, and fertiliser recommendations.
+
+`244,000+` soil samples · Real-time market data · Uncertainty quantification
 
 </td>
 </tr>
