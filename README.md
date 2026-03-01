@@ -92,6 +92,19 @@ Precision agriculture system — soil analysis, Monte Carlo yield prediction, an
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/ComputationalDentMat"><img src="https://img.shields.io/badge/ComputationalDentMat-5eead4?style=flat-square" height="25"/></a>
+
+Physics-based dental composite property predictor — rule of mixtures density engine with Bayesian Monte Carlo uncertainty quantification over shrinkage and void content.
+
+Rule of mixtures · Noyes-Whitney · Monte Carlo · Streamlit UI
+
+</td>
+<td width="50%" valign="top">
+</td>
+</tr>
 </table>
 
 <br/>
