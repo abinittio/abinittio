@@ -69,6 +69,33 @@ Shared representation · Task-specific heads
 
 <br/>
 
+## Applied Materials Chemistry
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/4-MuLation"><img src="https://img.shields.io/badge/4--MuLation-5eead4?style=flat-square" height="25"/></a>
+
+Modified-release dosage form design engine — BCS classification, Noyes-Whitney GI dissolution, multi-model release kinetics, and PDF report generation.
+
+Higuchi · Korsmeyer-Peppas · Zero-order · Bimodal IR+ER · Streamlit UI
+
+</td>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/SoilIntelligence"><img src="https://img.shields.io/badge/SoilIntelligence-5eead4?style=flat-square" height="25"/></a>
+
+Precision agriculture system — soil analysis, Monte Carlo yield prediction, and fertiliser recommendations.
+
+`244,000+` soil samples · Real-time market data · Uncertainty quantification
+
+</td>
+</tr>
+</table>
+
+<br/>
+
 ## BBB permeability & quantum descriptors
 
 <table>
@@ -96,7 +123,7 @@ GATv2 + TransformerConv · Pretrained on `320k` ZINC molecules
 
 <br/>
 
-## Simulation & other
+## Simulation & PK/PD
 
 <table>
 <tr>
@@ -110,13 +137,6 @@ RK4 · Michaelis-Menten · Sigmoid Emax · Bayesian personalisation
 
 </td>
 <td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/SoilIntelligence"><img src="https://img.shields.io/badge/SoilIntelligence-5eead4?style=flat-square" height="25"/></a>
-
-Precision agriculture system — soil analysis, Monte Carlo yield prediction, and fertiliser recommendations.
-
-`244,000+` soil samples · Real-time market data · Uncertainty quantification
-
 </td>
 </tr>
 </table>
