@@ -22,26 +22,26 @@ I develop graph neural networks and numerical simulation tools that encode real 
 
 <br/>
 
-## Drug discovery & ADMET
+## ADMET & Quantum
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### <a href="https://github.com/abinittio/Insilico-Drug-Discovery-Toolkit"><img src="https://img.shields.io/badge/Insilico_Drug_Discovery_Toolkit-5eead4?style=flat-square" height="25"/></a>
+### <a href="https://github.com/abinittio/BBB-Quantum-ADMET"><img src="https://img.shields.io/badge/BBB--Quantum--ADMET-5eead4?style=flat-square" height="25"/></a>
 
-Full ADMET prediction platform — monoamine transporter substrate vs blocker classification with stereochemistry-aware GNN.
+Quantum-enhanced GNN with 34-dimensional features from 3D conformers — HOMO/LUMO, Fukui indices, chemical hardness.
 
-`0.974 AUC` · GAT + GIN · Deployed on HuggingFace Spaces
+GATv2 + TransformerConv · Pretrained on `320k` ZINC molecules
 
 </td>
 <td width="50%" valign="top">
 
-### <a href="https://github.com/abinittio/Abuse-Liability-Predictor"><img src="https://img.shields.io/badge/Abuse_Liability_Predictor-5eead4?style=flat-square" height="25"/></a>
+### <a href="https://github.com/abinittio/MAT-Transporter"><img src="https://img.shields.io/badge/MAT--Transporter-5eead4?style=flat-square" height="25"/></a>
 
-Drug abuse risk classification combining MAT activity with SMARTS-based structural pattern recognition and SAR pharmacology rules.
+Monoamine transporter (DAT/NET/SERT) substrate vs blocker classification with stereochemistry-aware GNN encoding.
 
-Validated on `80` DEA-scheduled compounds · HIGH/MODERATE/LOW risk tiers
+`0.968 AUC` · Stereo-aware · DAT · NET · SERT
 
 </td>
 </tr>
@@ -109,9 +109,29 @@ Rule of mixtures · Noyes-Whitney · Monte Carlo · Streamlit UI
 
 <br/>
 
-## BBB permeability & quantum descriptors
+## ML for Drug Discovery
 
 <table>
+<tr>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/Insilico-Drug-Discovery-Toolkit"><img src="https://img.shields.io/badge/Insilico_Drug_Discovery_Toolkit-5eead4?style=flat-square" height="25"/></a>
+
+Full ADMET prediction platform — monoamine transporter substrate vs blocker classification with stereochemistry-aware GNN.
+
+`0.974 AUC` · GAT + GIN · Deployed on HuggingFace Spaces
+
+</td>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/abinittio/Abuse-Liability-Predictor"><img src="https://img.shields.io/badge/Abuse_Liability_Predictor-5eead4?style=flat-square" height="25"/></a>
+
+Drug abuse risk classification combining MAT activity with SMARTS-based structural pattern recognition and SAR pharmacology rules.
+
+Validated on `80` DEA-scheduled compounds · HIGH/MODERATE/LOW risk tiers
+
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 
@@ -123,13 +143,6 @@ Blood-Brain Barrier permeability predictor — hybrid GAT → GCN → GraphSAGE 
 
 </td>
 <td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/BBB-Quantum-ADMET"><img src="https://img.shields.io/badge/BBB--Quantum--ADMET-5eead4?style=flat-square" height="25"/></a>
-
-Quantum-enhanced GNN with 34-dimensional features from 3D conformers — HOMO/LUMO, Fukui indices, chemical hardness.
-
-GATv2 + TransformerConv · Pretrained on `320k` ZINC molecules
-
 </td>
 </tr>
 </table>
