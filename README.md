@@ -1,192 +1,45 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1b2a,50:1b4965,100:5eead4&height=220&section=header&text=Nabil%20Yasini-Ardekani&fontSize=42&fontColor=5eead4&fontAlignY=35&desc=BSc%20Chemistry%20%C2%B7%20MSc%20Artificial%20Intelligence&descSize=16&descColor=94a3b8&descAlignY=55&animation=fadeIn"/>
+<img src="assets/banner.svg" alt="Nabil Yasini-Ardekani — computational chemistry × machine learning" width="100%">
 
-<div align="center">
+I build machine-learning models for molecules and materials, and I spend most of my
+effort on the part that decides whether they mean anything: **the evaluation**.
+Leakage-controlled splits, ablations that isolate one variable, pre-registered decision
+rules, and negative results reported as negative.
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=3000&pause=1500&color=5EEAD4&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=60&lines=Aspiring+computational+chemist;Building+ML+tools+for+drug+discovery+%26+molecular+simulation" alt="Typing SVG" /></a>
+Currently finishing an MSc in Artificial Intelligence at Queen Mary University of London.
+Next: molecular modelling, then a PhD in electronic-structure machine learning.
 
-<br/>
+---
 
-![Python](https://img.shields.io/badge/Python-0d1b2a?style=for-the-badge&logo=python&logoColor=5eead4)
-![PyTorch](https://img.shields.io/badge/PyTorch-0d1b2a?style=for-the-badge&logo=pytorch&logoColor=5eead4)
-![TypeScript](https://img.shields.io/badge/TypeScript-0d1b2a?style=for-the-badge&logo=typescript&logoColor=5eead4)
-![RDKit](https://img.shields.io/badge/RDKit-0d1b2a?style=for-the-badge&logoColor=5eead4)
-![Next.js](https://img.shields.io/badge/Next.js-0d1b2a?style=for-the-badge&logo=nextdotjs&logoColor=5eead4)
+## Selected work
 
-</div>
+| Project | What it is | The result that matters |
+|---|---|---|
+| **[FiltraNex](https://github.com/abinittio/filtranex)** · [live demo](https://abinittio.github.io/filtranex/) | Five-stage screening cascade for CNS stimulant candidates, with an applicability-domain gate | Predictive accuracy is a function of distance from training chemistry — so every result ships with a confidence tier instead of a bare number |
+| **[StereoAwareGNN](https://github.com/abinittio/StereoAwareGNN)** | Protocol-controlled BBB permeability benchmark: 8 architectures × 3 evaluation protocols | ChemBERTa tops the random split at 0.958 and drops to 0.746 external; a fingerprint random forest gives up 0.005 and finishes first. Protocol moves the score more than architecture does |
+| **[bbb-honest-eval](https://github.com/abinittio/bbb-honest-eval)** | The leakage audit behind that correction | Reproduces an inflated 0.96 "external" AUC, isolates the dataset overlap that caused it, and publishes the corrected figures |
+| **[In-silico drug discovery toolkit](https://github.com/abinittio/Insilico-Drug-Discovery-Toolkit)** | Multi-endpoint ADMET platform: transporters, abuse liability, hERG, CYP450, BBB | Transporter ROC-AUC 0.968 (scaffold split, in-dataset), plus a SMARTS rules engine for known failure modes |
+| **[CYP450 metabolism predictor](https://github.com/abinittio/CYP450-Metabolism-Predictor)** | Multi-task GNN over five major CYP isoforms | Drug–drug interaction liability from structure alone |
+| **[DoseTrack](https://github.com/abinittio/dosetrack-v4)** | PK/PD simulation for lisdexamfetamine: prodrug conversion, RK4 integration, tolerance dynamics | A continuous physiological state estimator behind a minimal logging interface |
+| **MGT for CO₂ capture** *(private until examination)* | Ablation study of the Molecular Graph Transformer's long-range attention channel on 25,000 metal–organic frameworks | The channel is worth 24% lower error — but the gain appears in only 2 of 3 random initialisations, survives a capacity-matched control, and is **not** improved by feeding it real partial charges |
 
-<br/>
+---
 
-## What I work on
+## How I work
 
-I develop graph neural networks and numerical simulation tools that encode real chemistry — stereochemistry, quantum descriptors, pharmacokinetics — into predictive models. My focus is bridging the gap between physical chemistry and modern ML, where most tools ignore 3D molecular structure entirely.
+- **Controls before conclusions.** If two models differ in more than one way, the
+  comparison cannot attribute anything. Ablate one variable, hold the rest fixed.
+- **Pre-register the decision rule.** Minimum effect size and pass/fail criteria go into
+  the repository *before* the runs, so a negative result cannot be reinterpreted later.
+- **Publish the correction.** When a headline number turns out to be leakage, the
+  retraction stays in the record next to the corrected figure.
+- **Say what a model cannot do.** Applicability domains, failure modes and out-of-scope
+  chemistry are part of the deliverable, not an appendix.
 
-<br/>
+## Toolchain
 
-## ADMET & Quantum
+`PyTorch` · `PyTorch Geometric` · `DGL` · `RDKit` · `pymatgen` · `scikit-learn` ·
+`pandas` · `Flask` / `Streamlit` · GPU work on Kaggle and Colab
 
-<table>
-<tr>
-<td width="50%" valign="top">
+## Elsewhere
 
-### <a href="https://github.com/abinittio/BBB-Quantum-ADMET"><img src="https://img.shields.io/badge/BBB--Quantum--ADMET-5eead4?style=flat-square" height="25"/></a>
-
-Quantum-enhanced GNN with 34-dimensional features from 3D conformers — HOMO/LUMO, Fukui indices, chemical hardness.
-
-GATv2 + TransformerConv · Pretrained on `320k` ZINC molecules
-
-</td>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/MAT-Transporter"><img src="https://img.shields.io/badge/MAT--Transporter-5eead4?style=flat-square" height="25"/></a>
-
-Monoamine transporter (DAT/NET/SERT) substrate vs blocker classification with stereochemistry-aware GNN encoding.
-
-`0.968 AUC` · Stereo-aware · DAT · NET · SERT
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/hERG-Cardiotoxicity-GNN"><img src="https://img.shields.io/badge/hERG_Cardiotoxicity_GNN-5eead4?style=flat-square" height="25"/></a>
-
-Cardiac safety prediction via hERG channel inhibition modelling. Focal loss for class imbalance, K-fold ensembling with test-time augmentation.
-
-Trained on `7,000+` ChEMBL compounds
-
-</td>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/CYP450-Metabolism-Predictor"><img src="https://img.shields.io/badge/CYP450_Metabolism_Predictor-5eead4?style=flat-square" height="25"/></a>
-
-Multi-task GNN for drug-drug interaction screening across 5 cytochrome P450 enzymes (1A2, 2C9, 2C19, 2D6, 3A4).
-
-Shared representation · Task-specific heads
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-## Applied Materials Chemistry
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/4-MuLation"><img src="https://img.shields.io/badge/4--MuLation-5eead4?style=flat-square" height="25"/></a>
-
-Modified-release dosage form design engine — BCS classification, Noyes-Whitney GI dissolution, multi-model release kinetics, and PDF report generation.
-
-Higuchi · Korsmeyer-Peppas · Zero-order · Bimodal IR+ER · Streamlit UI
-
-</td>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/SoilIntelligence"><img src="https://img.shields.io/badge/SoilIntelligence-5eead4?style=flat-square" height="25"/></a>
-
-Precision agriculture system — soil analysis, Monte Carlo yield prediction, and fertiliser recommendations.
-
-`244,000+` soil samples · Real-time market data · Uncertainty quantification
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/ComputationalDentMat"><img src="https://img.shields.io/badge/ComputationalDentMat-5eead4?style=flat-square" height="25"/></a>
-
-Physics-based dental composite property predictor — rule of mixtures density engine with Bayesian Monte Carlo uncertainty quantification over shrinkage and void content.
-
-Rule of mixtures · Noyes-Whitney · Monte Carlo · Streamlit UI
-
-</td>
-<td width="50%" valign="top">
-</td>
-</tr>
-</table>
-
-<br/>
-
-## ML for Drug Discovery
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/Insilico-Drug-Discovery-Toolkit"><img src="https://img.shields.io/badge/Insilico_Drug_Discovery_Toolkit-5eead4?style=flat-square" height="25"/></a>
-
-Full ADMET prediction platform — monoamine transporter substrate vs blocker classification with stereochemistry-aware GNN.
-
-`0.974 AUC` · GAT + GIN · Deployed on HuggingFace Spaces
-
-</td>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/Abuse-Liability-Predictor"><img src="https://img.shields.io/badge/Abuse_Liability_Predictor-5eead4?style=flat-square" height="25"/></a>
-
-Drug abuse risk classification combining MAT activity with SMARTS-based structural pattern recognition and SAR pharmacology rules.
-
-Validated on `80` DEA-scheduled compounds · HIGH/MODERATE/LOW risk tiers
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/StereoAwareGNN"><img src="https://img.shields.io/badge/StereoAwareGNN-5eead4?style=flat-square" height="25"/></a>
-
-Blood-Brain Barrier permeability predictor — hybrid GAT → GCN → GraphSAGE with focal loss and stereo-aware encoding.
-
-`0.9612 AUC` on 7,807-compound external validation · Outperforms ADMETlab 2.0
-
-</td>
-<td width="50%" valign="top">
-</td>
-</tr>
-</table>
-
-<br/>
-
-## Simulation & PK/PD
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### <a href="https://github.com/abinittio/DoseTrack"><img src="https://img.shields.io/badge/DoseTrack-5eead4?style=flat-square" height="25"/></a>
-
-PK/PD simulation engine solving coupled ODEs for prodrug systems with saturable enzymatic conversion.
-
-RK4 · Michaelis-Menten · Sigmoid Emax · Bayesian personalisation
-
-</td>
-<td width="50%" valign="top">
-</td>
-</tr>
-</table>
-
-<br/>
-
-## Technical stack
-
-```
-Molecular ML        PyTorch · PyTorch Geometric · RDKit · DGL
-Quantum descriptors HOMO/LUMO · Fukui indices · Gasteiger charges · ETKDG conformers
-Numerical methods   RK4 · Michaelis-Menten · Hill equation · Sigmoid Emax
-Languages           Python · TypeScript
-Frameworks          Streamlit · Gradio · Next.js · React
-Deployment          HuggingFace Spaces · Vercel
-```
-
-<br/>
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=abinittio&show_icons=true&hide_border=true&bg_color=0d1b2a&title_color=5eead4&text_color=94a3b8&icon_color=5eead4&ring_color=5eead4" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abinittio&layout=compact&hide_border=true&bg_color=0d1b2a&title_color=5eead4&text_color=94a3b8" height="165"/>
-
-</div>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:5eead4,50:1b4965,100:0d1b2a&height=120&section=footer&text=ab%20initio%20%E2%80%94%20from%20first%20principles&fontSize=14&fontColor=5eead4&fontAlignY=65&animation=fadeIn"/>
+[nabil.engineer](https://nabil.engineer) · [LinkedIn](https://www.linkedin.com/in/nabil-yasini-ardekani)
