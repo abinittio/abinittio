@@ -6,7 +6,6 @@ Leakage-controlled splits, ablations that isolate one variable, pre-registered d
 rules, and negative results reported as negative.
 
 Currently finishing an MSc in Artificial Intelligence at Queen Mary University of London.
-Next: molecular modelling, then a PhD in electronic-structure machine learning.
 
 ---
 
