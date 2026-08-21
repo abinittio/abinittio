@@ -5,8 +5,6 @@ effort on the part that decides whether they mean anything: **the evaluation**.
 Leakage-controlled splits, ablations that isolate one variable, pre-registered decision
 rules, and negative results reported as negative.
 
-Currently finishing an MSc in Artificial Intelligence at Queen Mary University of London.
-
 ---
 
 ## Selected work
